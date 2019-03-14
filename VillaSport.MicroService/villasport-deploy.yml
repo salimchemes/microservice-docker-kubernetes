@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: villasport-deployment
+  labels:
+    app: villasport
+spec:
+  replicas: 3
+  template:
+    metadata:
+      name: villasport
+      labels:
+        app: villasport
+    spec:
+      containers:
+      - name: villasport
+        image: villasport:local
+        imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: villasport
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: villasport-service
+spec:
+  selector:
+    app: villasport
+  ports:
+    - port: 80
+  type: NodePort
+  
+  
