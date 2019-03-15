@@ -47,3 +47,7 @@
 * kubectl get deployments
 ### Get replicas
 * kubectl get rs
+
+# Serilog and Application Insights
+## Serilog: On Debug mode is logging into the console.
+## ApplicationInsights: When is not Debug mode is logging into ApplicationInsights. Check appsettings.json to see the Serilog config.

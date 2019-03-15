@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Sinks\" />
+    <Folder Include="Sinks\ApplicationInsights\" />
+    <Folder Include="Sinks\ApplicationInsights\Formatters\" />
+    <Folder Include="Sinks\ApplicationInsights\TelemetryConverters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serilog" Version="2.8.0" />
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.9.1" />
+  </ItemGroup>
 </Project>

@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaSport.MicroService.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaSport.MicroService", "VillaSport.MicroService\VillaSport.MicroService.csproj", "{8349722E-100C-4BB3-9679-855DF29C1586}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VillaSport.ApplicationInsights", "VillaSport.ApplicationInsights\VillaSport.ApplicationInsights.csproj", "{1644782F-31D0-4EE6-BB8A-D68931C7BAFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,5 +21,9 @@ Global
 		{8349722E-100C-4BB3-9679-855DF29C1586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8349722E-100C-4BB3-9679-855DF29C1586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8349722E-100C-4BB3-9679-855DF29C1586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1644782F-31D0-4EE6-BB8A-D68931C7BAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1644782F-31D0-4EE6-BB8A-D68931C7BAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1644782F-31D0-4EE6-BB8A-D68931C7BAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1644782F-31D0-4EE6-BB8A-D68931C7BAFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

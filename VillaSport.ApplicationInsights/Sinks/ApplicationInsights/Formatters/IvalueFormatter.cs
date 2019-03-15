@@ -1,10 +1,10 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using Serilog.Events;
+
 namespace VillaSport.ApplicationInsights.Sinks.ApplicationInsights.Formatters
 {
-    public class IvalueFormatter
+    public interface IValueFormatter
     {
-        public IvalueFormatter()
-        {
-        }
+        void Format(string propertyName, LogEventPropertyValue propertyValue, IDictionary<string, string> properties);
     }
 }

@@ -12,6 +12,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Serilog;
+using VillaSport.MicroService.Proxies;
+using VillaSport.MicroService.Repositories;
 
 namespace VillaSport.MicroService
 {
@@ -27,7 +29,9 @@ namespace VillaSport.MicroService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2); 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSingleton<IRestHttpProxy, RestHttpProxy>();
+            services.AddTransient<IVillaSportRepository, VillaSportRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

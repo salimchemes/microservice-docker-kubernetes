@@ -1,10 +1,11 @@
-﻿using System;
+﻿using VillaSport.ApplicationInsights.Sinks.ApplicationInsights.TelemetryConverters;
+
 namespace VillaSport.ApplicationInsights
-{
-    public class TelemetryConverter
+{ 
+    public static class TelemetryConverter
     {
-        public TelemetryConverter()
-        {
-        }
+        public static ITelemetryConverter Traces => new TraceTelemetryConverter();
+
+        public static ITelemetryConverter Events => new EventTelemetryConverter();
     }
 }

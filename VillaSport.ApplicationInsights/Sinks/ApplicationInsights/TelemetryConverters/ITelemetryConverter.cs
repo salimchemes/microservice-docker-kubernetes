@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.ApplicationInsights.Channel;
+using Serilog.Events;
+using System;
+using System.Collections.Generic;
 namespace VillaSport.ApplicationInsights.Sinks.ApplicationInsights.TelemetryConverters
 {
-    public class ITelemetryConverter
+    public interface ITelemetryConverter
     {
-        public ITelemetryConverter()
-        {
-        }
+        IEnumerable<ITelemetry> Convert(LogEvent logEvent, IFormatProvider formatProvider);
     }
 }

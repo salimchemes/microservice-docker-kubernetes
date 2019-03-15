@@ -1,6 +1,5 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
-using Serilog;
+﻿using Microsoft.AspNetCore.Mvc;
+using VillaSport.MicroService.Repositories;
 
 namespace VillaSport.MicroService.Controllers
 {
@@ -8,15 +7,18 @@ namespace VillaSport.MicroService.Controllers
     [ApiController]
     public class VillaSportController : ControllerBase
     {
+        private readonly IVillaSportRepository _villaSportRepository;
+
+        public VillaSportController(IVillaSportRepository villaSportRepository)
+        {
+            _villaSportRepository = villaSportRepository;
+        }
+
         // GET api/villasport
         [HttpGet]
         public ActionResult<string> Get()
-        {  
-            Log.Information("log info");
-            Log.Warning("log warning");
-            Log.Error("log error");
-            Log.Fatal("log fatal");
-            return $"VillaSport MS response :) from {Environment.MachineName}";
+        {
+            return _villaSportRepository.GetWelcomeMessage();
         }
     }
 }
